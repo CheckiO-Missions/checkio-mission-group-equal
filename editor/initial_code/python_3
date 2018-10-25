@@ -1,16 +1,15 @@
-def sum_two(a, b):
-    """
-        sums two passed arguments
-    """
+def group_equal(els):
     # your code here
-    return None
+    return els
 
 
 if __name__ == '__main__':
     print("Example:")
-    print(sum_two(3, 2))
+    print(group_equal([1, 1, 4, 4, 4, "hello", "hello", 4]))
     
     # These "asserts" are used for self-checking and not for an auto-testing
-    assert sum_two(3, 2) == 5, "First"
-    assert sum_two(5, 7) == 12, "Second"
+    assert group_equal([1, 1, 4, 4, 4, "hello", "hello", 4]) == [[1,1],[4,4,4],["hello","hello"],[4]]
+    assert group_equal([1, 2, 3, 4]) == [[1], [2], [3], [4]]
+    assert group_equal([1]) == [[1]]
+    assert group_equal([]) == []
     print("Coding complete? Click 'Check' to earn cool rewards!")
